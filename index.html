@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <title>Sanhub4u | San Ecosystem</title>
+    <meta name="description" content="Sanhub4u - The futuristic gateway to the San Ecosystem. Enter the future of innovation and technology.">
+    <meta name="keywords" content="Sanhub4u, San Ecosystem, futuristic technology, digital hub, innovation, tech portal">
+    <meta name="author" content="Sanhub4u">
+    <meta property="og:title" content="Sanhub4u | San Ecosystem">
+    <meta property="og:description" content="Experience the future with San Ecosystem.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#00eaff">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background: #02040a;
+            font-family: "Poppins", sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            color: #e0e0ff;
+        }
+
+        /* Futuristic Stars Background */
+        .star {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: #00eaff;
+            border-radius: 50%;
+            animation: blink 2s infinite ease-in-out;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0.2; transform: scale(0.3); }
+        }
+
+        /* Main Content */
+        .container {
+            text-align: center;
+            animation: fadeIn 1.4s forwards;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(10px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .title {
+            font-family: "Orbitron", sans-serif;
+            font-size: 55px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            text-shadow: 0 0 18px #00eaff;
+            margin-bottom: 50px;
+        }
+
+        /* Neon Enter Button */
+        .btn {
+            position: relative;
+            padding: 20px 70px;
+            border-radius: 50px;
+            font-size: 25px;
+            font-family: "Orbitron", sans-serif;
+            background: transparent;
+            border: 2px solid #00eaff;
+            color: #00eaff;
+            cursor: pointer;
+            letter-spacing: 3px;
+            transition: 0.4s;
+            box-shadow: 0 0 12px #00eaff;
+        }
+
+        .btn:hover {
+            background: #00eaff;
+            color: #000016;
+            transform: scale(1.12);
+            box-shadow: 0 0 30px #00eaff;
+        }
+
+        .btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.25);
+            transition: 0.4s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Stars Generator -->
+    <script>
+        for (let i = 0; i < 80; i++) {
+            let star = document.createElement('div');
+            star.classList.add('star');
+            star.style.top = Math.random() * 100 + "vh";
+            star.style.left = Math.random() * 100 + "vw";
+            star.style.animationDelay = Math.random() + "s";
+            document.body.appendChild(star);
+        }
+    </script>
+
+    <!-- Centered Content -->
+    <div class="container">
+        <div class="title">Sanhub4u</div>
+        <button class="btn">
+          <a href="#">ENTER</a></button>
+    </div>
+
+</body>
+</html>
